@@ -8,10 +8,10 @@ const HomeApps = () => {
     console.log(data);
 
     return (
-        <div className='p-20 items-center text-center'>
+        <div className='px-5 py-20 md:p-20 items-center text-center'>
             <h1 className='text-5xl font-bold mb-4 text-center' >Trending Apps</h1>
             <p className='text-center text-gray-400'>Explore All Trending Apps on the Market developed by us</p>
-            <div className='grid my-10 grid-cols-4 gap-4'>
+            <div className='grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4'>
             {
                 data.map(cart => <div key={cart.id} cart={cart} className=' p-4 bg-[#ffffff] rounded-md shadow-2xl'>
                     <img className='w-full h-70' src={cart.image} alt="" />
