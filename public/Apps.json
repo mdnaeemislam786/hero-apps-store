@@ -1,0 +1,362 @@
+[
+  {
+    "image": "./image/img1.png",
+    "title": "NoteMaster",
+    "companyName": "Three Blind Devs",
+    "id": 101,
+    "description": "A fast and intuitive note-taking app designed for students, professionals, and anyone who loves organized thoughts.",
+    "size": 18.5,
+    "reviews": 1200,
+    "ratingAvg": 4.3,
+    "downloads": "50+",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 470 }
+    ]
+  },
+  {
+    "image": "./image/img2.jpeg",
+    "title": "FitTrack",
+    "companyName": "FitTrack CCS",
+    "id": 102,
+    "description": "Track your daily fitness goals, monitor calories, and stay motivated with personalized health insights and reminders.",
+    "size": 25.2,
+    "reviews": 980,
+    "ratingAvg": 4.6,
+    "downloads": "100+",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 460 }
+    ]
+  },
+  {
+    "image": "./image/img3.png",
+    "title": "BanglaLearn",
+    "companyName": "Urva Apps",
+    "id": 103,
+    "description": "Learn Bangla interactively with lessons, quizzes, and audio support tailored for beginners and advanced learners alike.",
+    "size": 32.1,
+    "reviews": 1240,
+    "ratingAvg": 4.8,
+    "downloads": "500k+",
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1350 }
+    ]
+  },
+  {
+    "image": "./image/img4.jpeg",
+    "title": "TaskFlow",
+    "companyName": "Idee Programmer",
+    "id": 104,
+    "description": "Manage tasks, collaborate with teams, and track project progress using a clean and responsive interface.",
+    "size": 20.0,
+    "reviews": 860,
+    "ratingAvg": 4.1,
+    "downloads": "10+",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 280 }
+    ]
+  },
+  {
+    "image": "./image/img5.png",
+    "title": "PhotoSnap",
+    "companyName": "PixelWorks",
+    "id": 105,
+    "description": "Edit photos with advanced filters, effects, and tools. Perfect for social media creators and photography lovers.",
+    "size": 45.3,
+    "reviews": 3000,
+    "ratingAvg": 4.7,
+    "downloads": "2M+",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1900 }
+    ]
+  },
+  {
+    "image": "./image/img6.jpeg",
+    "title": "BudgetBuddy",
+    "companyName": "Innovational App Labs",
+    "id": 106,
+    "description": "Track your expenses, set monthly budgets, and get smart financial tips to save more and spend wisely.",
+    "size": 16.8,
+    "reviews": 650,
+    "ratingAvg": 4.0,
+    "downloads": "50+",
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 150 }
+    ]
+  },
+  {
+    "image": "./image/img7.jpeg",
+    "title": "CodeCraft",
+    "companyName": "TinkerGen",
+    "id": 107,
+    "description": "Practice coding with challenges, tutorials, and real-world projects. Ideal for beginners and experienced developers.",
+    "size": 22.4,
+    "reviews": 1700,
+    "ratingAvg": 4.5,
+    "downloads": "1M+",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 900 }
+    ]
+  },
+  {
+    "image": "./image/img8.png",
+    "title": "TravelMate",
+    "companyName": "S&A",
+    "id": 108,
+    "description": "Plan trips, book hotels, and explore destinations with curated guides and real-time travel updates.",
+    "size": 28.9,
+    "reviews": 1100,
+    "ratingAvg": 4.2,
+    "downloads": "1+",
+    "ratings": [
+      { "name": "1 star", "count": 55 },
+      { "name": "2 star", "count": 85 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 410 }
+    ]
+  },
+  {
+    "image": "./image/img1.png",
+    "title": "MindEase",
+    "companyName": "CalmNest Studios",
+    "id": 109,
+    "description": "Meditation and mindfulness app with guided sessions, sleep sounds, and stress relief tools.",
+    "size": 34.7,
+    "reviews": 2100,
+    "ratingAvg": 4.6,
+    "downloads": "1M+",
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1135 }
+    ]
+  },
+  {
+    "image": "./image/img2.jpeg",
+    "title": "EduSpark",
+    "companyName": "BrightLearn Inc.",
+    "id": 110,
+    "description": "Interactive learning platform for school students with video lessons, quizzes, and progress tracking.",
+    "size": 40.2,
+    "reviews": 1850,
+    "ratingAvg": 4.4,
+    "downloads": "500k+",
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 700 }
+    ]
+  },
+  {
+    "image": "./image/img3.png",
+    "title": "QuickScan",
+    "companyName": "DocuTech Labs",
+    "id": 111,
+    "description": "Scan documents, receipts, and notes with high-quality output and instant PDF conversion.",
+    "size": 19.3,
+    "reviews": 950,
+    "ratingAvg": 4.3,
+    "downloads": "100k+",
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 355 }
+    ]
+  },
+  {
+    "image": "./image/img4.jpeg",
+    "title": "RecipeRealm",
+    "companyName": "KitchenVerse",
+    "id": 112,
+    "description": "Discover and save recipes from around the world with step-by-step instructions and video support.",
+    "size": 36.5,
+    "reviews": 2200,
+    "ratingAvg": 4.7,
+    "downloads": "2M+",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 280 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1200 }
+    ]
+  },
+  {
+    "image": "./image/img5.png",
+    "title": "LangBridge",
+    "companyName": "PolyLingua",
+    "id": 113,
+    "description": "Learn multiple languages with AI-powered lessons, speech practice, and cultural tips.",
+    "size": 38.0,
+    "reviews": 1950,
+    "ratingAvg": 4.5,
+    "downloads": "1M+",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 980 }
+    ]
+  },
+  {
+    "image": "./image/img6.jpeg",
+    "title": "ShopSmart",
+    "companyName": "RetailGenie",
+    "id": 114,
+    "description": "Compare prices, find deals, and track discounts across thousands of online stores.",
+    "size": 27.8,
+    "reviews": 1400,
+    "ratingAvg": 4.2,
+    "downloads": "500k+",
+    "ratings": [
+      { "name": "1 star", "count": 55 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 555 }
+    ]
+  },
+  {
+    "image": "./image/img7.jpeg",
+    "title": "DailyJournal",
+    "companyName": "MindLogix",
+    "id": 115,
+    "description": "Capture your thoughts, moods, and reflections with customizable templates and privacy lock.",
+    "size": 21.5,
+    "reviews": 870,
+    "ratingAvg": 4.3,
+    "downloads": "100k+",
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 180 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "image": "./image/img8.png",
+    "title": "CryptoPulse",
+    "companyName": "BlockWave",
+    "id": 116,
+    "description": "Track cryptocurrency prices, news, and portfolio performance in real-time.",
+    "size": 29.4,
+    "reviews": 1600,
+    "ratingAvg": 4.4,
+    "downloads": "1M+",
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 735 }
+    ]
+  },
+  {
+    "image": "./image/img16.png",
+    "title": "SketchPad",
+    "companyName": "Artify Studio",
+    "id": 117,
+    "description": "Draw, sketch, and paint with intuitive tools and layers for digital artists and hobbyists.",
+    "size": 42.0,
+    "reviews": 2400,
+    "ratingAvg": 4.6,
+    "downloads": "2M+",
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 1270 }
+    ]
+  },
+  {
+    "image": "./image/img17.jpeg",
+    "title": "GreenSteps",
+    "companyName": "EcoTrack",
+    "id": 118,
+    "description": "Monitor your carbon footprint, earn eco-points, and get tips for sustainable living.",
+    "size": 24.6,
+    "reviews": 920,
+    "ratingAvg": 4.2,
+    "downloads": "100k+",
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 310 }
+    ]
+  },
+  {
+    "image": "./image/img18.png",
+    "title": "VoiceNote Pro",
+    "companyName": "SpeakSoft",
+    "id": 119,
+    "description": "Record voice notes, transcribe audio, and organize recordings with tags and folders.",
+    "size": 20.9,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": "500k+",
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 405 }
+    ]
+  },
+  {
+    "image": "./image/img18.png",
+    "title": "Sound Boost Pro",
+    "companyName": "SoundLaybari",
+    "id": 120,
+    "description": "Record voice notes, transcribe audio, and organize recordings with tags and folders.",
+    "size": 19.9,
+    "reviews": 2100,
+    "ratingAvg": 4.3,
+    "downloads": "900k+",
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 405 }
+    ]
+  }
+]
