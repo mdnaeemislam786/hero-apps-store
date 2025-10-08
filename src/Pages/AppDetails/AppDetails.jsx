@@ -20,8 +20,19 @@ const AppDetails = () => {
   const { image, ratingAvg, size, title, companyName, ratings, description, detailedDescription ,downloads, reviews} = app;
   const img = "../../../public"+image;
 
+  const handlinstall = () => {
+    const existingList = JSON.parse(localStorage.getItem('installed'))
+    let updateList = []
+    if (existingList) {
+      const isDuplicate = existingList.some(p => String(p.id) === id)
+      if (isDuplicate) return alert('apps instlled')
+        updateList = [...existingList, app]
+    }else{
+      updateList.push(app)
+    }
+    localStorage.setItem('installed', JSON.stringify(updateList))
+  }
 
-  
 
   return (
     <>
@@ -56,7 +67,7 @@ const AppDetails = () => {
                 </div>
             </div>
             <div className='flex md:items-center md:justify-start justify-center'>
-            <button className="btn bg-green-500 rounded-xl text-white">Install Now ({size} MB)</button>
+            <button onClick={() => handlinstall()} className="btn bg-green-500 rounded-xl text-white">Install Now ({size} MB)</button>
 
             </div>
         </div>
