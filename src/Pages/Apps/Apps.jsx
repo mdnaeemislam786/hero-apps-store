@@ -3,7 +3,7 @@ import AllApps from '../../Components/AllApps/AllApps';
 
 const Apps = () => {
     return (
-        <div>
+        <div className='px-5'>
             <div>
                 <h1 className='text-5xl font-bold text-center mt-20 mb-4'>Our All Applications</h1>
                 <p className='text-center text-gray-400 mb-10'>

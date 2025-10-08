@@ -1,12 +1,19 @@
 import React from "react";
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
+import { useNavigate } from "react-router";
 
 const HomeApps = ({cart}) => {
+    const navigate = useNavigate();
+
+  const cartClick = (cart) => {
+    navigate(`/app-details/${cart.id}`);
+    <AppDetails cart={cart}></AppDetails>
+  }
   return (
     <div >
 
-      <div >
+      <div onClick={() => cartClick(cart)}>
           <div key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
             <img className="w-full h-70" src={cart.image} alt="" />
             <h1 className="text-left text-2xl font-bold my-4">
