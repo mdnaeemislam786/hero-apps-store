@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router';
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
@@ -11,7 +11,7 @@ const AllApps = () => {
       const [search, setSearch] = useState('')
       const term = search.trim().toLocaleLowerCase()
 
-      const searchApps = term ? apps.filter(app => app.companyName.toLocaleLowerCase().includes(term))
+      const searchApps = term ? apps.filter(app => app.title.toLocaleLowerCase().includes(term))
 
       : apps 
 
@@ -19,7 +19,7 @@ const AllApps = () => {
   const navigate = useNavigate();
 
   const cartClick = (cart) => {
-    navigate(`/app-details`);
+    navigate(`/app-details/${cart.id}`);
     <AppDetails cart={cart}></AppDetails>
   };
     return (
@@ -48,10 +48,10 @@ const AllApps = () => {
             <div className="cursor-pointer grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
             >
                 {searchApps.map((cart) => (
-                <div onClick={() => cartClick(`${cart}`)} key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
+                <div onClick={() => cartClick(cart)} key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
                     <img className="w-full h-70" src={cart.image} alt="" />
                     <h1 className="text-left text-2xl font-bold my-4">
-                    {cart.companyName}
+                    {cart.title}
                     </h1>
                     <div className="flex justify-between">
                     <div className="flex bg-[#f1f5e8] p-2 rounded-xl items-center">

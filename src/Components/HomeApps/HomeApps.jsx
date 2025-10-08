@@ -10,7 +10,7 @@ const HomeApps = ({cart}) => {
           <div key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
             <img className="w-full h-70" src={cart.image} alt="" />
             <h1 className="text-left text-2xl font-bold my-4">
-              {cart.companyName}
+              {cart.title}
             </h1>
             <div className="flex justify-between">
               <div className="flex bg-[#f1f5e8] p-2 rounded-xl items-center">

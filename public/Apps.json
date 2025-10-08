@@ -1,6 +1,6 @@
 [
   {
-    "image": "./image/img1.png",
+    "image": "/image/img1.png",
     "title": "NoteMaster",
     "companyName": "Three Blind Devs",
     "id": 101,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "./image/img2.jpeg",
+    "image": "/image/img2.jpeg",
     "title": "FitTrack",
     "companyName": "FitTrack CCS",
     "id": 102,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "./image/img3.png",
+    "image": "/image/img3.png",
     "title": "BanglaLearn",
     "companyName": "Urva Apps",
     "id": 103,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "./image/img4.jpeg",
+    "image": "/image/img4.jpeg",
     "title": "TaskFlow",
     "companyName": "Idee Programmer",
     "id": 104,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "./image/img5.png",
+    "image": "/image/img5.png",
     "title": "PhotoSnap",
     "companyName": "PixelWorks",
     "id": 105,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "./image/img6.jpeg",
+    "image": "/image/img6.jpeg",
     "title": "BudgetBuddy",
     "companyName": "Innovational App Labs",
     "id": 106,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "./image/img7.jpeg",
+    "image": "/image/img7.jpeg",
     "title": "CodeCraft",
     "companyName": "TinkerGen",
     "id": 107,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "./image/img8.png",
+    "image": "/image/img8.png",
     "title": "TravelMate",
     "companyName": "S&A",
     "id": 108,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "./image/img1.png",
+    "image": "/image/img1.png",
     "title": "MindEase",
     "companyName": "CalmNest Studios",
     "id": 109,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "./image/img2.jpeg",
+    "image": "/image/img2.jpeg",
     "title": "EduSpark",
     "companyName": "BrightLearn Inc.",
     "id": 110,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "./image/img3.png",
+    "image": "/image/img3.png",
     "title": "QuickScan",
     "companyName": "DocuTech Labs",
     "id": 111,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "./image/img4.jpeg",
+    "image": "/image/img4.jpeg",
     "title": "RecipeRealm",
     "companyName": "KitchenVerse",
     "id": 112,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "./image/img5.png",
+    "image": "/image/img5.png",
     "title": "LangBridge",
     "companyName": "PolyLingua",
     "id": 113,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "./image/img6.jpeg",
+    "image": "/image/img6.jpeg",
     "title": "ShopSmart",
     "companyName": "RetailGenie",
     "id": 114,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "./image/img7.jpeg",
+    "image": "/image/img7.jpeg",
     "title": "DailyJournal",
     "companyName": "MindLogix",
     "id": 115,
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "image": "./image/img8.png",
+    "image": "/image/img8.png",
     "title": "CryptoPulse",
     "companyName": "BlockWave",
     "id": 116,
@@ -288,7 +288,7 @@
     ]
   },
   {
-    "image": "./image/img16.png",
+    "image": "/image/img16.png",
     "title": "SketchPad",
     "companyName": "Artify Studio",
     "id": 117,
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "image": "./image/img17.jpeg",
+    "image": "/image/img17.jpeg",
     "title": "GreenSteps",
     "companyName": "EcoTrack",
     "id": 118,
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "image": "./image/img18.png",
+    "image": "/image/img18.png",
     "title": "VoiceNote Pro",
     "companyName": "SpeakSoft",
     "id": 119,
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "./image/img18.png",
+    "image": "/image/img18.png",
     "title": "Sound Boost Pro",
     "companyName": "SoundLaybari",
     "id": 120,
