@@ -2,6 +2,7 @@ import React from "react";
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
 import { useNavigate } from "react-router";
+import AppDetails from "../../Pages/AppDetails/AppDetails";
 
 
 const HomeApps = ({cart}) => {
@@ -15,8 +16,8 @@ const HomeApps = ({cart}) => {
     <div >
 
       <div onClick={() => cartClick(cart)}>
-          <div key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
-            <img className="w-full h-70" src={cart.image} alt="" />
+          <div key={cart.id} className="p-4 hover:scale-101 hover:transition bg-[#ffffff] rounded-2xl shadow-2xl">
+            <img className="w-full rounded-2xl h-70" src={cart.image} alt="" />
             <h1 className="text-left text-2xl font-bold my-4">
               {cart.title}
             </h1>

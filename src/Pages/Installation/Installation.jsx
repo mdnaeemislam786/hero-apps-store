@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
+import { toast, ToastContainer } from 'react-toastify';
 
 const Installation = () => {
     const [install, setInstall] = useState([])
     const [sortOrder, setSortOrder] = useState('none')
-     useEffect(() => {
+    
+    useEffect(() => {
         const installedapps = JSON.parse(localStorage.getItem('installed'))
         if(installedapps) setInstall(installedapps)
     }, [])
@@ -25,9 +28,9 @@ const Installation = () => {
         let updateApp = installedapps.filter(p => p.id !== id)
         setInstall(updateApp)
         localStorage.setItem('installed', JSON.stringify(updateApp))
-        alert("App Uninstall")
+        toast("App Uninstall")
     }
-
+    
     return (
         <div className='bg-[#f5f5f5]'>
             <div>
@@ -46,44 +49,51 @@ const Installation = () => {
                 </select>
             </div>
 
-
-            <div className='pb-[60vh]'>
-                <div className='mx-1 sm:mx-3 md:mx-10 flex flex-col gap-5'>
-                    {
-                        sortApp.map(apps => (
-                        <div className="card card-side bg-[#ffffff] shadow-sm items-center p-1 sm:p-3">
-                            <figure>
-                                <img
-                                className='w-[80px] rounded-xl border h-[80px]'
-                                src={apps.image} />
-                            </figure>
-                            <div className="p-1 sm:p-3 ml-0 sm:ml-2 flex w-full items-center justify-between">
-                                <div className='w-full'>
-                                    <h2 className="font-bold -mb-5 text-2xl">{apps.title}</h2>
-                                    {/* <p>Developed by {apps.companyName}</p> */}
-                                    <div className='flex gap-2'>
-                                        <div className='my-5 items-center flex '>
-                                            <img className='h-4' src={download} alt="" />
-                                            <h1 className='font-bold text-green-500'>{apps.downloads}</h1>
-                                        </div>
-                                        <div className='my-5 items-center flex '>
-                                            <img className='h-4' src={rating} alt="" />
-                                            <h1  className='font-bold text-red-500'>{apps.ratingAvg}</h1>
-                                        </div>
-                                        <div className='my-5 items-center flex'>
-                                            <h1 className='font-bold text-gray-500'>{apps.size}MB</h1>
+            {
+                install.length === 0 ? 
+                <div className='text-center py-10'>
+                    <h1 className='text-2xl font-bold mb-4'>No App Installed</h1> 
+                    <Link to="/apps" className='btn btn-primary'>Browse All Apps</Link> 
+                </div> :
+                <div className='pb-[60vh]'>
+                    <div className='mx-1 sm:mx-3 md:mx-10 flex flex-col gap-5'>
+                        {
+                            sortApp.map(apps => (
+                            <div key={apps.id} className="card card-side bg-[#ffffff] shadow-sm items-center p-1 sm:p-3">
+                                <figure>
+                                    <img
+                                    className='w-[80px] rounded-xl border h-[80px]'
+                                    src={apps.image} alt={apps.title} />
+                                </figure>
+                                <div className="p-1 sm:p-3 ml-0 sm:ml-2 flex w-full items-center justify-between">
+                                    <div className='w-full'>
+                                        <h2 className="font-bold -mb-5 text-2xl">{apps.title}</h2>
+                                        
+                                        <div className='flex gap-2'>
+                                            <div className='my-5 items-center flex '>
+                                                <img className='h-4' src={download} alt="downloads" />
+                                                <h1 className='font-bold text-green-500'>{apps.downloads}</h1>
+                                            </div>
+                                            <div className='my-5 items-center flex '>
+                                                <img className='h-4' src={rating} alt="rating" />
+                                                <h1  className='font-bold text-red-500'>{apps.ratingAvg}</h1>
+                                            </div>
+                                            <div className='my-5 items-center flex'>
+                                                <h1 className='font-bold text-gray-500'>{apps.size}MB</h1>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div >
-                                    <button onClick={() => uninstallApp(apps.id)} className="btn px-1 sm:px-5 btn-success">Uninstall</button>
+                                    <div >
+                                        <button onClick={() => uninstallApp(apps.id)} className="btn px-1 sm:px-5 btn-success">Uninstall</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
                 </div>
-            </div>
+            }
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

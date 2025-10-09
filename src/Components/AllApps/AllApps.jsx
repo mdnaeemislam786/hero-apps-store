@@ -34,8 +34,8 @@ const AllApps = () => {
     
     return (
         <div>
-            <div className='flex justify-between items-center mx-5'>
-                <span>Apps Found ({searchApps.length})</span>
+            <div className='flex-col sm:flex-row flex justify-between items-center mx-5'>
+                <span className='my-5 sm:m-0'>Apps Found ({searchApps.length})</span>
                 <label className="input">
                     <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g
@@ -61,11 +61,11 @@ const AllApps = () => {
                 <div>
                 {searchApps.length == 0 ? <NoAppFound></NoAppFound> :
 
-                <div className="cursor-pointer grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
+                <div className="cursor-pointer grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5"
                 > 
                     {searchApps.map((cart) => (
-                    <div onClick={() => cartClick(cart)} key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
-                        <img className="w-full h-70" src={cart.image} alt="" />
+                    <div onClick={() => cartClick(cart)} key={cart.id} className="p-4 hover:scale-101 hover:transition bg-[#ffffff] rounded-2xl shadow-2xl">
+                        <img className="w-full rounded-2xl h-70" src={cart.image} alt="" />
                         <h1 className="text-left text-2xl font-bold my-4">
                         {cart.title}
                         </h1>

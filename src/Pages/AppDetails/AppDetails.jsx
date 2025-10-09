@@ -4,7 +4,9 @@ import useApps from '../../hooks/useApps';
 import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
 import reviwe from "../../assets/icon-review.png";
+import { ToastContainer, toast } from 'react-toastify';
 import { BarChart, Bar, YAxis, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import LoadingSpiner from '../../Components/LoadingSpiner/LoadingSpiner';
 
 
 const AppDetails = () => {
@@ -21,34 +23,34 @@ const AppDetails = () => {
   }, [id]);
 
   if (loading || !app) {
-    return <div className="text-center p-10">Loading app details...</div>;
+    return <LoadingSpiner></LoadingSpiner>;
   }
 
   const { image, ratingAvg, size, title, companyName, ratings, description, detailedDescription, downloads, reviews } = app;
-  const img = "../../../public" + image;
 
   const handleInstall = () => {
     const existingList = JSON.parse(localStorage.getItem('installed')) || [];
     
     const isDuplicate = existingList.some(p => String(p.id) === id);
     if (isDuplicate) {
-      alert('App is already installed!');
+      toast('App is already installed!');
       return;
     }
 
     const updatedList = [...existingList, app];
     localStorage.setItem('installed', JSON.stringify(updatedList));
     setIsInstalled(true);
-    alert('App installed successfully!');
+    toast('App installed successfully!');
   };
 
   return (
     <>
+      <ToastContainer />
       <div className='m-3 xl:flex md:p-20 '>
         <div>
           <img
             className='sm:h-[350px] rounded-xl w-[350px] border mr-45'
-            src={img}
+            src={image}
             alt={title}
           />
         </div>
@@ -93,16 +95,17 @@ const AppDetails = () => {
             width={500}
             height={300}
             data={ratings}
+            layout="vertical"
             margin={{
               top: 5,
               right: 30,
-              left: 20,
-              bottom: 5,
+              left: 0,
+              bottom: 20,
             }}
             barSize={120}
           >
-            <YAxis />
-            <XAxis dataKey="name" padding={{ left: 10, right: 10 }} />
+            <XAxis type="number" /> 
+            <YAxis type="category" dataKey="name" width={80} />
             <Tooltip />
             <Legend />
             <CartesianGrid strokeDasharray="3 3" />
