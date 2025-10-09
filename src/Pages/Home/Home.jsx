@@ -4,10 +4,14 @@ import Hero from '../../Components/Hero/Hero';
 import HomeApps from '../../Components/HomeApps/HomeApps';
 import { Link  } from 'react-router';
 import useApps from '../../hooks/useApps';
+import LoadingSpiner from '../../Components/LoadingSpiner/LoadingSpiner';
+import ErrorPage from '../ErrorPage/ErrorPage';
 const Home = () => {
     const {apps , loading, error } = useApps()
     const homeApps = apps.slice(0, 8);
-
+    if (error) {
+    return <ErrorPage message={error.message}></ErrorPage>;
+    }
     // console.log(apps);
     return (
         <>
@@ -20,7 +24,7 @@ const Home = () => {
                 Explore All Trending Apps on the Market developed by us
                 </p>
 
-
+            {loading? <LoadingSpiner></LoadingSpiner>:
             <div className="grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
                 {
                     homeApps.map(cart => (
@@ -28,6 +32,7 @@ const Home = () => {
                     ))
                 }
             </div>
+            }
 
             <Link
                 className="btn bg-linear-to-br text-white from-[#9f62f2] to-[#632ee3] rounded-md px-6 "

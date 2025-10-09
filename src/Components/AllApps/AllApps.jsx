@@ -5,23 +5,33 @@ import rating from "../../assets/icon-ratings.png";
 import AppDetails from '../../Pages/AppDetails/AppDetails';
 import useApps from '../../hooks/useApps';
 
+import LoadingSpiner from '../LoadingSpiner/LoadingSpiner';
+import NoAppFound from '../NoAppFound,/NoAppFound';
+
 const AllApps = () => {
-      const {apps} = useApps();
-
+      const {apps, loading} = useApps();
       const [search, setSearch] = useState('')
+      const [searchLoading, setSearchLoading] = useState(false)
+
       const term = search.trim().toLocaleLowerCase()
+      const searchApps = term ? apps.filter(app => app.title.toLocaleLowerCase().includes(term)) : apps 
 
-      const searchApps = term ? apps.filter(app => app.title.toLocaleLowerCase().includes(term))
+      const handleSearchChange = (e) => {
+        setSearch(e.target.value)
+        setSearchLoading(true)
+        
+        setTimeout(() => {
+          setSearchLoading(false)
+        }, 300)
+      }
 
-      : apps 
+      const navigate = useNavigate();
 
-//   console.log(searchApps);
-  const navigate = useNavigate();
-
-  const cartClick = (cart) => {
-    navigate(`/app-details/${cart.id}`);
-    <AppDetails cart={cart}></AppDetails>
-  };
+      const cartClick = (cart) => {
+        navigate(`/app-details/${cart.id}`);
+        <AppDetails cart={cart}></AppDetails>
+      };
+    
     return (
         <div>
             <div className='flex justify-between items-center mx-5'>
@@ -41,35 +51,44 @@ const AllApps = () => {
                     </svg>
                     <input
                      value={search}
-                     onChange={e => setSearch(e.target.value)} type="search"  
+                     onChange={handleSearchChange} 
+                     type="search"  
                      placeholder="Search" />
                 </label>
             </div>
-            <div className="cursor-pointer grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
-            >
-                {searchApps.map((cart) => (
-                <div onClick={() => cartClick(cart)} key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
-                    <img className="w-full h-70" src={cart.image} alt="" />
-                    <h1 className="text-left text-2xl font-bold my-4">
-                    {cart.title}
-                    </h1>
-                    <div className="flex justify-between">
-                    <div className="flex bg-[#f1f5e8] p-2 rounded-xl items-center">
-                        <span className="text-xl text-[#1cac0d] font-bold">
-                        {cart.downloads}
-                        </span>
-                        <img className="h-5 ml-3" src={download} alt="" />
+            
+            {loading || searchLoading ? <LoadingSpiner></LoadingSpiner> : 
+                <div>
+                {searchApps.length == 0 ? <NoAppFound></NoAppFound> :
+
+                <div className="cursor-pointer grid my-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"
+                > 
+                    {searchApps.map((cart) => (
+                    <div onClick={() => cartClick(cart)} key={cart.id} className="p-4 bg-[#ffffff] rounded-md shadow-2xl">
+                        <img className="w-full h-70" src={cart.image} alt="" />
+                        <h1 className="text-left text-2xl font-bold my-4">
+                        {cart.title}
+                        </h1>
+                        <div className="flex justify-between">
+                        <div className="flex bg-[#f1f5e8] p-2 rounded-xl items-center">
+                            <span className="text-xl text-[#1cac0d] font-bold">
+                            {cart.downloads}
+                            </span>
+                            <img className="h-5 ml-3" src={download} alt="" />
+                        </div>
+                        <div className="flex bg-[#fff0e1] items-center rounded-xl px-3">
+                            <span className="text-xl text-[#ff692e] font-bold">
+                            {cart.ratingAvg}
+                            </span>
+                            <img className="h-5 ml-3" src={rating} alt="" />
+                        </div>
+                        </div>
                     </div>
-                    <div className="flex bg-[#fff0e1] items-center rounded-xl px-3">
-                        <span className="text-xl text-[#ff692e] font-bold">
-                        {cart.ratingAvg}
-                        </span>
-                        <img className="h-5 ml-3" src={rating} alt="" />
-                    </div>
-                    </div>
+                    ))}
                 </div>
-                ))}
-            </div>
+            }
+            </div>   
+            } 
         </div>
     );
 };

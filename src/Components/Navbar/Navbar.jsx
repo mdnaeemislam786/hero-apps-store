@@ -60,7 +60,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
 
-        <Link to="https://github.com/" className="btn bg-linear-to-br text-white from-[#9f62f2] to-[#632ee3]"> <FaGithub />Contribute</Link>
+        <Link to="https://github.com/mdnaeemislam786" className="btn bg-linear-to-br text-white from-[#9f62f2] to-[#632ee3]"> <FaGithub />Contribute</Link>
       </div>
     </div>
   );

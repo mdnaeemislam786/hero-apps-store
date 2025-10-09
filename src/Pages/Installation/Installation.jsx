@@ -4,30 +4,53 @@ import rating from "../../assets/icon-ratings.png";
 
 const Installation = () => {
     const [install, setInstall] = useState([])
-    useEffect(() => {
+    const [sortOrder, setSortOrder] = useState('none')
+     useEffect(() => {
         const installedapps = JSON.parse(localStorage.getItem('installed'))
         if(installedapps) setInstall(installedapps)
     }, [])
+
+    const sortApp = ( () => {
+        if ( sortOrder === 'high-low' ){
+            return [...install].sort((a,b) => a.size - b.size)
+        }else if(sortOrder === 'low-high') {
+            return [...install].sort((a,b)=> b.size - a.size)
+        }else{
+            return install
+        }
+    })()
+
+    const uninstallApp = (id) => {
+        const installedapps = JSON.parse(localStorage.getItem('installed'))
+        let updateApp = installedapps.filter(p => p.id !== id)
+        setInstall(updateApp)
+        localStorage.setItem('installed', JSON.stringify(updateApp))
+        alert("App Uninstall")
+    }
+
     return (
         <div className='bg-[#f5f5f5]'>
             <div>
-                <h1 className='text-center font-bold text-4xl mt-15 mb-5'>Your Installed Apps</h1>
+                <h1 className='text-center font-bold text-4xl pt-15 mb-5'>Your Installed Apps</h1>
                 <p className='text-center text-gray-400'>Explore All Trending Apps on the Market developed by us</p>
             </div>
             <div className='flex justify-between items-center mx-5 my-10'>
                 <span>({install.length}) Apps Found</span>
-                <select defaultValue="Pick a color" className="select w-[40px] sm:w-auto appearance-none">
-                    <option disabled={true}>Sort By Size</option>
-                    <option>High-Low</option>
-                    <option>Low-High</option>
+                <select 
+                value={sortOrder}
+                onChange={e => setSortOrder(e.target.value)}
+                className="select w-[40px] sm:w-auto appearance-none">
+                    <option value='none' disabled={true}>Sort By Size</option>
+                    <option value='high-low'>Low-High</option>
+                    <option value='low-high'>High-Low</option>
                 </select>
             </div>
 
 
-            <div>
+            <div className='pb-[60vh]'>
                 <div className='mx-1 sm:mx-3 md:mx-10 flex flex-col gap-5'>
                     {
-                        install.map(apps => (
+                        sortApp.map(apps => (
                         <div className="card card-side bg-[#ffffff] shadow-sm items-center p-1 sm:p-3">
                             <figure>
                                 <img
@@ -53,7 +76,7 @@ const Installation = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <button className="btn px-1 sm:px-5 btn-success">Uninstall</button>
+                                    <button onClick={() => uninstallApp(apps.id)} className="btn px-1 sm:px-5 btn-success">Uninstall</button>
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import download from "../../assets/icon-downloads.png";
 import rating from "../../assets/icon-ratings.png";
 import { useNavigate } from "react-router";
 
+
 const HomeApps = ({cart}) => {
     const navigate = useNavigate();
 
