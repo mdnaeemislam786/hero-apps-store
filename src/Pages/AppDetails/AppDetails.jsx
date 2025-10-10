@@ -7,6 +7,7 @@ import reviwe from "../../assets/icon-review.png";
 import { ToastContainer, toast } from 'react-toastify';
 import { BarChart, Bar, YAxis, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import LoadingSpiner from '../../Components/LoadingSpiner/LoadingSpiner';
+import ErrorApp from '../../Components/ErrorApp/ErrorApp';
 
 
 const AppDetails = () => {
@@ -22,8 +23,11 @@ const AppDetails = () => {
     setIsInstalled(installed);
   }, [id]);
 
-  if (loading || !app) {
+  if (loading) {
     return <LoadingSpiner></LoadingSpiner>;
+  }
+  if (!app) {
+  return <ErrorApp />;
   }
 
   const { image, ratingAvg, size, title, companyName, ratings, description, detailedDescription, downloads, reviews } = app;
@@ -46,19 +50,20 @@ const AppDetails = () => {
   return (
     <>
       <ToastContainer />
-      <div className='m-3 xl:flex md:p-20 '>
+      <div className='m-3 flex flex-col md:flex-row text-center md:text-left items-center md:items-start md:flex md:p-20 '>
         <div>
           <img
-            className='sm:h-[350px] rounded-xl w-[350px] border mr-45'
+            className='sm:h-[350px] rounded-xl w-[350px] border md:mr-45'
             src={image}
             alt={title}
           />
         </div>
-        <div className='w-full'>
+        <div className='w-full sm:ml-5'>
           <div>
             <h1 className='text-2xl md:text-5xl font-black'>SmPlan: {title}</h1>
             <p className='md:text-2xl font-bold my-5 text-gray-400'>Developed by <span className='text-blue-400'>{companyName}</span></p>
-          </div><hr />
+          </div>
+          <div className='flex flex-col-reverse md:block '>
           <div className="sm:flex justify-center md:justify-start my-5 gap-6">
             <div className='my-5 items-center flex flex-col'>
               <img src={download} alt="" />
@@ -79,11 +84,12 @@ const AppDetails = () => {
           <div className='flex md:items-center md:justify-start justify-center'>
             <button
               onClick={handleInstall}
-              className={`btn rounded-xl text-white ${isInstalled ? 'bg-green-800' : 'bg-green-500'}`}
+              className={`btn rounded-xl mt-5 sm:mt-0 text-black ${isInstalled ? 'bg-green-800' : 'bg-green-500'}`}
               disabled={isInstalled}
             >
               {isInstalled ? 'Installed' : `Install Now (${size} MB)`}
             </button>
+          </div>
           </div>
         </div>
       </div>
