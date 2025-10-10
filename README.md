@@ -12,7 +12,6 @@ A sleek and responsive single-page application (SPA) built with modern web techn
 
 ## 🛠️ Technologies Used
 
-|----------------|--------------------------------------------------------|
 | Category       | Tools & Libraries                                      |
 |----------------|--------------------------------------------------------|
 | Core Frontend  | HTML, CSS, JavaScript                                  |
@@ -22,7 +21,6 @@ A sleek and responsive single-page application (SPA) built with modern web techn
 | Icons          | React Icons                                            |
 | Charts         | Recharts                                               |
 | Notifications  | React Toastify                                         |
-|----------------|--------------------------------------------------------|
 
 ---
 
